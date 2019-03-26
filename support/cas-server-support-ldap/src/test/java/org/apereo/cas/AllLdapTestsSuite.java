@@ -1,6 +1,5 @@
 package org.apereo.cas;
 
-import org.apereo.cas.authentication.ActiveDirectoryJndiBindDnLdapAuthenticationHandlerTests;
 import org.apereo.cas.authentication.ActiveDirectoryJndiSamAccountNameLdapAuthenticationHandlerTests;
 import org.apereo.cas.authentication.ActiveDirectoryJndiUPNLdapAuthenticationHandlerTests;
 import org.apereo.cas.authentication.ActiveDirectoryUnboundIDBindDnSSLLdapAuthenticationHandlerTests;
@@ -19,7 +18,6 @@ import org.junit.platform.suite.api.SelectClasses;
  * @since 4.1.0
  */
 @SelectClasses({
-    ActiveDirectoryJndiBindDnLdapAuthenticationHandlerTests.class,
     ActiveDirectoryUnboundIDBindDnSSLLdapAuthenticationHandlerTests.class,
     ActiveDirectoryUnboundIDTypeADAuthenticationHandlerTests.class,
     ActiveDirectoryJndiUPNLdapAuthenticationHandlerTests.class,

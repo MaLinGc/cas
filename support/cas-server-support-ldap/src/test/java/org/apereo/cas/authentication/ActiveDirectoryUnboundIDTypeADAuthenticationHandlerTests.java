@@ -23,8 +23,9 @@ import org.springframework.test.context.TestPropertySource;
     "cas.authn.ldap[0].enhanceWithEntryResolver=false",
     "cas.authn.ldap[0].minPoolSize=0",
     "cas.authn.ldap[0].providerClass=org.ldaptive.provider.unboundid.UnboundIDProvider",
-    "cas.authn.ldap[0].trustStore=file:/tmp/adcacerts.jks",
+    "cas.authn.ldap[0].trustStore=" + BaseActiveDirectoryLdapAuthenticationHandlerTests.AD_TRUST_STORE,
     "cas.authn.ldap[0].trustStoreType=JKS",
+    "cas.authn.ldap[0].trustStorePassword=changeit",
     "cas.authn.ldap[0].hostnameVerifier=DEFAULT"
 })
 @EnabledIfContinuousIntegration

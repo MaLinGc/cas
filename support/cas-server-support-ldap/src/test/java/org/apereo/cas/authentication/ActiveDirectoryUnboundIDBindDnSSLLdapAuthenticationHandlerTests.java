@@ -8,7 +8,7 @@ import org.springframework.test.context.TestPropertySource;
  * This test uses UnboundID Provider against Active Directory but it specifies the type as AUTHENTICATED.
  * The AD type requires a dnFormat and Ldaptive will try create an UnboundID DN object but some patterns
  * that AD will let you bind as (e.g. userPrincipalName@domain.name or Domain\sAMAccountName won't pass
- * UnboundID validation.
+ * UnboundID DN validation.
  * This test validates a configuration where the user logs in with the sAMAccountName.
  * Referrals are turned off since search is subtree search from root.
  * @author Hal Deadman
@@ -29,8 +29,9 @@ import org.springframework.test.context.TestPropertySource;
     "cas.authn.ldap[0].searchFilter=(sAMAccountName={user})",
     "cas.authn.ldap[0].minPoolSize=0",
     "cas.authn.ldap[0].providerClass=org.ldaptive.provider.unboundid.UnboundIDProvider",
-    "cas.authn.ldap[0].trustStore=file:/tmp/adcacerts.jks",
+    "cas.authn.ldap[0].trustStore=" + BaseActiveDirectoryLdapAuthenticationHandlerTests.AD_TRUST_STORE,
     "cas.authn.ldap[0].trustStoreType=JKS",
+    "cas.authn.ldap[0].trustStorePassword=changeit",
     "cas.authn.ldap[0].hostnameVerifier=DEFAULT"
     })
 
